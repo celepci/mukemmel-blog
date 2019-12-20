@@ -1,3 +1,5 @@
+Muhammet Celepci - Projeyi devraldım. 20.12.2019
+
 Dünyanın en güzel blog'u, www.mukemmel.blog!
 
 Bu proje nasıl kodlandı izlemek ister misin? Youtube videosu: https://youtu.be/cHUh0FmPd3A
