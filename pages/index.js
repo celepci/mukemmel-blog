@@ -9,6 +9,8 @@ const Home = ({ posts }) => (
     <Head>
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
+      <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Pacifico&display=swap" rel="stylesheet" />
+      <link href="/styles/global.css" rel="stylesheet" />
     </Head>
 
     <div className="hero">
@@ -44,25 +46,7 @@ const Home = ({ posts }) => (
     ))}
 
     <style jsx>{`
-      .container {
-        max-width: 650px;
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      .hero {
-        text-align: center;
-        margin: 96px 0;
-      }
-
-      .social-link {
-        margin-right: 8px;
-      }
-
-      .hero-title {
-        font-size: 48px;
-      }
-
+      
       .blog-date {
         text-align: right;
         color: #cccccc;

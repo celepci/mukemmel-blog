@@ -1,0 +1,20 @@
+.container {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    margin: 96px 0;
+}
+
+.social-link+.social-link {
+    margin-left: 8px;
+}
+
+.hero-title {
+    font-size: 55px;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
