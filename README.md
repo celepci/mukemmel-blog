@@ -1,8 +1,12 @@
 Muhammet Celepci - Projeyi devraldım. 20.12.2019
 
-Dünyanın en güzel blog'u, www.mukemmel.blog!
+> npm run dev
 
-Bu proje nasıl kodlandı izlemek ister misin? Youtube videosu: https://youtu.be/cHUh0FmPd3A
+ilgili klasöre git.
+
+> json-server --watch entries.json
+
+çalıştır.
 
 ## YARIŞMAYA KATIL! (son gün 1 Şubat 2020)
 
