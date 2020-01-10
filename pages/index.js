@@ -1,60 +1,207 @@
 import React from "react";
 import fetch from "isomorphic-unfetch";
-import Head from "next/head";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import IndexSvg from "../components/svg/index";
+import BlogSlider from "../components/blog_slider";
+
 
 const Home = ({ posts }) => (
-  <div>
-    <Head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-      <title>Muhammet Celepci Blog </title>
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-      <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Pacifico&display=swap" rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-      <link href="/css/config.css" rel="stylesheet" />
-      <link href="/css/style.css" rel="stylesheet" />
-    </Head>
+  <div id="root">
     <Header />
-    <IndexSvg />
-    <div className="container">
-      {posts.map(post => (
-        <div className="blog">
-          <h2 className="blog-title">
-            <Link href={post.slug}>
-              <a className="blog-title-link">{post.title}</a>
-            </Link>
-          </h2>
-          <div className="blog-text">
-            <ReactMarkdown source={post.details} />
+    <section className="main">
+      <div className="container">
+        <BlogSlider />
+        <section className="about">
+          <div className="row align-items-center">
+            <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8 col-m480-12">
+              <div className="about-text">
+                <h1 className="main_title">Who Am I?</h1>
+                <p>Hey there, I'm Muhammet Celepci. I'm a Computer Engineer and work as a Front End Developer.</p>
+                <Link href="/about">
+                  <a className="btn btn-outline-primary btn-lg">What Else About Me</a>
+                </Link>
+              </div>
+            </div>
+            <div className="col-xl-6 offset-xl-2 col-lg-7 offset-lg-0 col-md-6 offset-md-0 col-sm-4">
+              <div className="about-images">
+                <div className="about-images-item">
+                  <div className="image_cover md"><img src="/img/img7.jpg" /></div>
+                </div>
+                <div className="about-images-item">
+                  <div className="image_cover lg"><img src="/img/wp6.jpg" /></div>
+                </div>
+                <div className="about-images-item">
+                  <div className="image_cover xs"><img src="/img/wp3.jpg" /></div>
+                </div>
+                <div className="about-images-item">
+                  <div className="image_cover sm"><img src="/img/wp4.jpg" /></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="blog-date">{post.date}</div>
+        </section>
+        <section className="about">
+          <div className="row align-items-center">
+            <div className="col-xl-6 col-lg-7 offset-lg-0 col-md-6 offset-md-0 col-sm-4 order-1 order-sm-0">
+              <div className="about-images">
+                <div className="about-images-item">
+                  <div className="image_cover sm"><img src="/img/vuejs.jpg" /></div>
+                </div>
+                <div className="about-images-item">
+                  <div className="image_cover lg"><img src="/img/work.jpg" /></div>
+                </div>
+                <div className="about-images-item">
+                  <div className="image_cover xs"><img src="/img/wordpress.jpg" /></div>
+                </div>
+                <div className="about-images-item">
+                  <div className="image_cover sm"><a className="lets_contact" href=""><span>Let's</span>Contact</a></div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 offset-xl-2 col-lg-5 col-md-6 col-sm-8 col-m480-12 order-sm-1">
+              <div className="about-text">
+                <h1 className="main_title">What I do?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium culpa dolore enim eos illo, illum iusto laboriosam laudantium magni nemo pariatur, provident quae reprehenderit sed sint suscipit voluptate! Repellat?</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="works">
+          <h2 className="main_title lg text-center">Works</h2>
+          <div className="description text-center">Lorem ipsum dolor sit amet, explicabo facilis fugiat harum laboriosam magni nam.</div>
+          <div className="works-slider owl-theme owl-carousel owl-theme_custom">
+            <div className="works-item">
+              <div className="image"><img src="/img/works/burak_nakliye.jpg" /></div>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://buraknakliye.com" target="_blank">Buraknakliye.com</a>
+                <div className="works-item-detail-summary">UI Design, Frontend Development, Wordpress Theme Development</div><span>2019</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/fabrikada.jpg" /></div>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://fabrikada.com" target="_blank">Fabrikada.com</a>
+                <div className="works-item-detail-summary">UI&UX, Frontend Development</div><span>2019</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/kdzeregli.jpg" /></div>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://kdzeregli.org" target="_blank">Kdzeregli.org</a>
+                <div className="works-item-detail-summary">UI&UX, Frontend Development, Wordpress Theme Development</div><span>2019</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/fotottarena.jpg" /></div>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://fotottarena.com" target="_blank">Fotottarena.com</a>
+                <div className="works-item-detail-summary">UI&UX, Frontend Development, Wordpress Theme Development</div><span>2019</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/wunderdesigns.jpg" /></div>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://wunderdesigns.at" target="_blank">Wunderdesigns.at</a>
+                <div className="works-item-detail-summary">UI Design, Frontend Development</div><span>2019</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/hairtime.jpg" /></div>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://hairtime.be" target="_blank">Hairtime.be</a>
+                <div className="works-item-detail-summary">UI Design, Frontend Development, Wordpress Theme Development</div><span>2019</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/matbaa.jpg" /></div>
+              <div className="works-item-detail">
+                <div className="works-item-detail-title">Printing House</div>
+                <div className="works-item-detail-summary">UI&UX, Frontend Development</div><span>2018</span>
+              </div>
+            </div>
+            <div className="works-item">
+              <div className="image"><img src="/img/works/e-commerce.jpg" /></div>
+              <div className="works-item-detail">
+                <div className="works-item-detail-title">E-Commerce</div>
+                <div className="works-item-detail-summary">UI Design, Frontend Development</div><span>2018</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="techs">
+          <h2 className="main_title lg text-center">Techs</h2>
+          <div className="description text-center">Lorem ipsum dolor sit amet, explicabo facilis fugiat harum laboriosam magni nam.</div>
+          <div className="row align-items-center">
+            <div className="col-xl-4 col-lg-5 col-md-6 order-1 order-m425-0">
+              <div className="techs-text">
+                <h3 className="main_title sm">Which technologies am I use/learn/teach?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda, expedita perferendis quod sed sint voluptas voluptates? At distinctio ipsa nesciunt nisi odio, qui quo quos, sapiente soluta temporibus vero.</p>
+              </div>
+            </div>
+            <div className="col-xl-6 offset-xl-2 col-lg-7 col-md-6 order-m425-1">
+              <div className="techs-content">
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="VueJs"><img src="/img/techs/vue.svg" /></div>
+                </div>
+                <div className="techs-content-item justify-content-start align-items-end">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="HTML 5"><img src="/img/techs/html5.svg" /></div>
+                </div>
+                <div className="techs-content-item justify-content-end align-items-start">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="CSS 3"><img src="/img/techs/css3.svg" /></div>
+                </div>
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Javascript"><img src="/img/techs/js.svg" /></div>
+                </div>
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Gulp"><img src="/img/techs/gulp.svg" /></div>
+                </div>
+                <div className="techs-content-item justify-content-end align-items-end">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="NPM"><img src="/img/techs/npm.svg" /></div>
+                </div>
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Git, Github, Gitlab"><img src="/img/techs/git.svg" /></div>
+                </div>
+                <div className="techs-content-item justify-content-start align-items-start">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="SASS / SCSS"><img src="/img/techs/sass.svg" /></div>
+                </div>
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Wordpress"><img src="/img/techs/wordpress.svg" /></div>
+                </div>
+                <div className="techs-content-item justify-content-end align-items-start">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Bootstrap 4+"><img src="/img/techs/bootstrap4.svg" /></div>
+                </div>
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Pug/Jade"><img src="/img/techs/pug.svg" /></div>
+                </div>
+                <div className="techs-content-item">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="NodeJS"><img src="/img/techs/nodejs.svg" /></div>
+                </div>
+                <div className="techs-content-item justify-content-end align-items-start">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="PHP"><img src="/img/techs/php.svg" /></div>
+                </div>
+                <div className="techs-content-item align-items-end">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="MySQL, Database Management"><img src="/img/techs/mysql.svg" /></div>
+                </div>
+                <div className="techs-content-item align-items-start">
+                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Webpack"><img src="/img/techs/webpack.svg" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    {posts.map(post => (
+      <div className="blog">
+        <h2 className="blog-title">
+          <Link href={post.slug}>
+            <a className="blog-title-link">{post.title}</a>
+          </Link>
+        </h2>
+        <div className="blog-text">
+          <ReactMarkdown source={post.details} />
         </div>
-      ))}
-    </div>
+        <div className="blog-date">{post.date}</div>
+      </div>
+    ))}
     <Footer />
-
-    <style jsx>{`
-      
-      .blog-date {
-        text-align: right;
-        color: #cccccc;
-        margin: 12px 0 48px 0;
-      }
-
-      a {
-        color: #35459e;
-        text-decoration: none;
-      }
-    `}</style>
   </div>
 );
 
