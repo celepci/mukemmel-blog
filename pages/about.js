@@ -1,7 +1,5 @@
 import React from "react";
-//import fetch from "isomorphic-unfetch";
 import Link from "next/link";
-//import ReactMarkdown from "react-markdown";
 import Footer from "../components/footer";
 import Header from "../components/header";
 

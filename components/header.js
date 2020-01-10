@@ -128,22 +128,22 @@ const Header = () => (
                             <div className="menu_linkler d-flex ml-10">
                                 <ul className="nav">
                                     <li className="nav-item">
-                                        <Link href="">
+                                        <Link href="/">
                                             <a className="nav-link">Homepage</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="">
-                                            <a className="nav-link">Blog</a>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link href="">
+                                        <Link href="/about">
                                             <a className="nav-link">About</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="">
+                                        <Link href="/blog">
+                                            <a className="nav-link">Blog</a>
+                                        </Link>
+                                    </li>    
+                                    <li className="nav-item">
+                                        <Link href="/contact">
                                             <a className="nav-link">Contact</a>
                                         </Link>
                                     </li>

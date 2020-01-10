@@ -42,7 +42,12 @@ const Footer = () => (
                     </div>
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="linkler"><Link href="#">Blog</Link><Link href="#">Contact</Link></div>
+                            <div className="linkler">
+                                <Link href="#"><a>Homepage</a></Link>
+                                <Link href="#"><a>About</a></Link>
+                                <Link href="#"><a>Blog</a></Link>
+                                <Link href="#"><a>Contact</a></Link>
+                                </div>
                         </div>
                     </div>
                 </div>
