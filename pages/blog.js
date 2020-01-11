@@ -40,7 +40,7 @@ const Blog = ({ posts }) => (
                                                 <svg>
                                                     <use xlinkHref="#book"></use>
                                                 </svg>
-                                                <span>5 dk</span>
+                                                <span>{post.readingtime}</span>
                                             </div>
                                         </div>
                                         <div className="news-item-detail-content">

@@ -7,6 +7,7 @@ export const getPosts = () => {
       summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda",
       date: "11 January 2020",
       time: "12:22 AM",
+      readingtime: "5 min",
       image: {
         src: "/img/img7.jpg",
         alt: "Deneme Alt Etiketi"
@@ -28,6 +29,7 @@ export const getPosts = () => {
       summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda",
       date: "13 January 2020",
       time: "12:22 AM",
+      readingtime: "5 min",
       image: {
         src: "/img/img7.jpg",
         alt: "Deneme Alt Etiketi"
@@ -48,6 +50,7 @@ export const getPosts = () => {
       summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda",
       date: "1 Aralık 2020",
       time: "12:22 PM",
+      readingtime: "5 min",
       image: {
         src: "/img/img7.jpg",
         alt: "Deneme Alt Etiketi"
