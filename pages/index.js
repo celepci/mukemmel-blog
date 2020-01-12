@@ -26,16 +26,16 @@ const Home = ({ posts }) => (
             <div className="col-xl-6 offset-xl-2 col-lg-7 offset-lg-0 col-md-6 offset-md-0 col-sm-4">
               <div className="about-images">
                 <div className="about-images-item">
-                  <div className="image_cover md"><img src="/img/img7.jpg" /></div>
+                  <div className="image_cover md"><img src="/img/img7.jpg" alt="Muhammet Celepci About" /></div>
                 </div>
                 <div className="about-images-item">
-                  <div className="image_cover lg"><img src="/img/wp6.jpg" /></div>
+                  <div className="image_cover lg"><img src="/img/wp6.jpg" alt="Muhammet Celepci About" /></div>
                 </div>
                 <div className="about-images-item">
-                  <div className="image_cover xs"><img src="/img/wp3.jpg" /></div>
+                  <div className="image_cover xs"><img src="/img/wp3.jpg" alt="Muhammet Celepci About" /></div>
                 </div>
                 <div className="about-images-item">
-                  <div className="image_cover sm"><img src="/img/wp4.jpg" /></div>
+                  <div className="image_cover sm"><img src="/img/wp4.jpg" alt="Muhammet Celepci About" /></div>
                 </div>
               </div>
             </div>
@@ -73,37 +73,37 @@ const Home = ({ posts }) => (
           <div className="works-slider owl-theme owl-carousel owl-theme_custom">
             <div className="works-item">
               <div className="image"><img src="/img/works/burak_nakliye.jpg" /></div>
-              <div className="works-item-detail"><a className="works-item-detail-title" href="https://buraknakliye.com" target="_blank">Buraknakliye.com</a>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://buraknakliye.com" target="_blank" rel="norefferer noopener">Buraknakliye.com</a>
                 <div className="works-item-detail-summary">UI Design, Frontend Development, Wordpress Theme Development</div><span>2019</span>
               </div>
             </div>
             <div className="works-item">
               <div className="image"><img src="/img/works/fabrikada.jpg" /></div>
-              <div className="works-item-detail"><a className="works-item-detail-title" href="https://fabrikada.com" target="_blank">Fabrikada.com</a>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://fabrikada.com" target="_blank" rel="norefferer noopener">Fabrikada.com</a>
                 <div className="works-item-detail-summary">UI&UX, Frontend Development</div><span>2019</span>
               </div>
             </div>
             <div className="works-item">
               <div className="image"><img src="/img/works/kdzeregli.jpg" /></div>
-              <div className="works-item-detail"><a className="works-item-detail-title" href="https://kdzeregli.org" target="_blank">Kdzeregli.org</a>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://kdzeregli.org" target="_blank" rel="norefferer noopener">Kdzeregli.org</a>
                 <div className="works-item-detail-summary">UI&UX, Frontend Development, Wordpress Theme Development</div><span>2019</span>
               </div>
             </div>
             <div className="works-item">
               <div className="image"><img src="/img/works/fotottarena.jpg" /></div>
-              <div className="works-item-detail"><a className="works-item-detail-title" href="https://fotottarena.com" target="_blank">Fotottarena.com</a>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://fotottarena.com" target="_blank" rel="norefferer noopener">Fotottarena.com</a>
                 <div className="works-item-detail-summary">UI&UX, Frontend Development, Wordpress Theme Development</div><span>2019</span>
               </div>
             </div>
             <div className="works-item">
               <div className="image"><img src="/img/works/wunderdesigns.jpg" /></div>
-              <div className="works-item-detail"><a className="works-item-detail-title" href="https://wunderdesigns.at" target="_blank">Wunderdesigns.at</a>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://wunderdesigns.at" target="_blank" rel="norefferer noopener">Wunderdesigns.at</a>
                 <div className="works-item-detail-summary">UI Design, Frontend Development</div><span>2019</span>
               </div>
             </div>
             <div className="works-item">
               <div className="image"><img src="/img/works/hairtime.jpg" /></div>
-              <div className="works-item-detail"><a className="works-item-detail-title" href="https://hairtime.be" target="_blank">Hairtime.be</a>
+              <div className="works-item-detail"><a className="works-item-detail-title" href="https://hairtime.be" target="_blank" rel="norefferer noopener">Hairtime.be</a>
                 <div className="works-item-detail-summary">UI Design, Frontend Development, Wordpress Theme Development</div><span>2019</span>
               </div>
             </div>

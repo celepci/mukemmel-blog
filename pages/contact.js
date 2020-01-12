@@ -45,9 +45,7 @@ const Contact = () => (
                             <div className="contact_item-content">
                                 <div className="title">Contact me by email</div>
                                 <div className="description">You can contact me using Email. Click to below button or <pre className="d-inline">muhammetcelepci1@gmail.com</pre> copy this mail address.</div>
-                                <Link href="mailto:muhammetcelepci1@gmail.com" prefetch={false}>
-                                    <a className="btn btn-primary btn-sm btn-icon-right"  target="_blank" rel="norefferer noopener">Send Mail<i className="fas fa-arrow-right"></i></a>
-                                </Link>
+                                <a href="mailto:muhammetcelepci1@gmail.com" className="btn btn-primary btn-sm btn-icon-right" target="_blank" rel="norefferer noopener">Send Mail<i className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -64,9 +62,7 @@ const Contact = () => (
                             <div className="contact_item-content">
                                 <div className="title">Contact me by Telegram</div>
                                 <div className="description">I use to Telegram App actively. You can contact me using the Telegram App.</div>
-                                <Link href="https://web.telegram.org/#/im?p=@celepci" prefetch={false}>
-                                    <a className="btn btn-primary btn-sm btn-icon-right"  target="_blank" rel="norefferer noopener">Contact on Telegram<i className="fas fa-arrow-right"></i></a>
-                                </Link>
+                                <a href="https://web.telegram.org/#/im?p=@celepci" className="btn btn-primary btn-sm btn-icon-right" target="_blank" rel="norefferer noopener">Contact on Telegram<i className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
