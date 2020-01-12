@@ -22,6 +22,7 @@ const Contact = () => (
                 <div className="row">
                     <div className="col-xl-12">
                         <h1 className="main_title">Contact</h1>
+                        <p className="description"><b>Hi dude!</b> I'm just one click away if you want to work with me or ask something. Below are 2 quick ways to contact me. </p>
                     </div>
                     <div className="col-xl-5 col-lg-6">
                         <div className="contact_item">
@@ -43,8 +44,10 @@ const Contact = () => (
                             </div>
                             <div className="contact_item-content">
                                 <div className="title">Contact me by email</div>
-                                <div className="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aimpedit necessitatibus perferendis quam quos sit, suscipit unde.</div>
-                                <a className="btn btn-primary btn-sm btn-icon-right" href="">Send Mail<i className="fas fa-arrow-right"></i></a>
+                                <div className="description">You can contact me using Email. Click to below button or copy this <i>muhammetcelepci1@gmail.com</i> mail address.</div>
+                                <Link href="mailto:muhammetcelepci1@gmail.com" prefetch={false}>
+                                    <a className="btn btn-primary btn-sm btn-icon-right"  target="_blank" rel="norefferer noopener">Send Mail<i className="fas fa-arrow-right"></i></a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -60,8 +63,10 @@ const Contact = () => (
                             </div>
                             <div className="contact_item-content">
                                 <div className="title">Contact me by Telegram</div>
-                                <div className="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cipsa, possimus praesentium sed totam.</div>
-                                <a className="btn btn-primary btn-sm btn-icon-right" href="">Contact on Telegram<i className="fas fa-arrow-right"></i></a>
+                                <div className="description">I use to Telegram App actively. You can contact me using the Telegram App.</div>
+                                <Link href="https://web.telegram.org/#/im?p=@celepci" prefetch={false}>
+                                    <a className="btn btn-primary btn-sm btn-icon-right"  target="_blank" rel="norefferer noopener">Contact on Telegram<i className="fas fa-arrow-right"></i></a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import BlogSlider from "../components/blog_slider";
@@ -137,49 +136,49 @@ const Home = ({ posts }) => (
             <div className="col-xl-6 offset-xl-2 col-lg-7 col-md-6 order-m425-1">
               <div className="techs-content">
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="VueJs"><img src="/img/techs/vue.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="VueJs"><img src="/img/techs/vue.svg" /></div>
                 </div>
                 <div className="techs-content-item justify-content-start align-items-end">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="HTML 5"><img src="/img/techs/html5.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="HTML 5"><img src="/img/techs/html5.svg" /></div>
                 </div>
                 <div className="techs-content-item justify-content-end align-items-start">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="CSS 3"><img src="/img/techs/css3.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="CSS 3"><img src="/img/techs/css3.svg" /></div>
                 </div>
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Javascript"><img src="/img/techs/js.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Javascript"><img src="/img/techs/js.svg" /></div>
                 </div>
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Gulp"><img src="/img/techs/gulp.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Gulp"><img src="/img/techs/gulp.svg" /></div>
                 </div>
                 <div className="techs-content-item justify-content-end align-items-end">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="NPM"><img src="/img/techs/npm.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="NPM"><img src="/img/techs/npm.svg" /></div>
                 </div>
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Git, Github, Gitlab"><img src="/img/techs/git.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Git, Github, Gitlab"><img src="/img/techs/git.svg" /></div>
                 </div>
                 <div className="techs-content-item justify-content-start align-items-start">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="SASS / SCSS"><img src="/img/techs/sass.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="SASS / SCSS"><img src="/img/techs/sass.svg" /></div>
                 </div>
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Wordpress"><img src="/img/techs/wordpress.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Wordpress"><img src="/img/techs/wordpress.svg" /></div>
                 </div>
                 <div className="techs-content-item justify-content-end align-items-start">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Bootstrap 4+"><img src="/img/techs/bootstrap4.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Bootstrap 4+"><img src="/img/techs/bootstrap4.svg" /></div>
                 </div>
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Pug/Jade"><img src="/img/techs/pug.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Pug/Jade"><img src="/img/techs/pug.svg" /></div>
                 </div>
                 <div className="techs-content-item">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="NodeJS"><img src="/img/techs/nodejs.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="NodeJS"><img src="/img/techs/nodejs.svg" /></div>
                 </div>
                 <div className="techs-content-item justify-content-end align-items-start">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="PHP"><img src="/img/techs/php.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="PHP"><img src="/img/techs/php.svg" /></div>
                 </div>
                 <div className="techs-content-item align-items-end">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="MySQL, Database Management"><img src="/img/techs/mysql.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="MySQL, Database Management"><img src="/img/techs/mysql.svg" /></div>
                 </div>
                 <div className="techs-content-item align-items-start">
-                  <div className="image_cover" data-toggle="tooltip" data-placement="bottom" title="Webpack"><img src="/img/techs/webpack.svg" /></div>
+                  <div className="image_cover" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Webpack"><img src="/img/techs/webpack.svg" /></div>
                 </div>
               </div>
             </div>
@@ -188,19 +187,6 @@ const Home = ({ posts }) => (
       </div>
     </section>
 
-    {posts.map(post => (
-      <div className="blog">
-        <h2 className="blog-title">
-          <Link href={post.slug}>
-            <a className="blog-title-link">{post.title}</a>
-          </Link>
-        </h2>
-        <div className="blog-text">
-          <ReactMarkdown source={post.details} />
-        </div>
-        <div className="blog-date">{post.date}</div>
-      </div>
-    ))}
     <Footer />
   </div>
 );

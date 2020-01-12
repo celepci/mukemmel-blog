@@ -10,7 +10,7 @@ const Footer = () => (
                 <div className="content">
                     <div className="row align-items-center">
                         <div className="col-md-4">
-                            <Link href="">
+                            <Link href="/">
                                 <a className="logo">
                                     <div className="icon"><img src="/img/pineapple2.svg" /></div>
                                     <div className="name">Muhammet.Celepci</div>
@@ -22,17 +22,17 @@ const Footer = () => (
                                 <Link href="#">
                                     <a className="item"><i className="fab fa-facebook-f"></i></a>
                                 </Link>
-                                <Link href="#">
-                                    <a className="item"><i className="fab fa-twitter"></i></a>
+                                <Link href="https://web.telegram.org/#/im?p=@celepci" prefetch={false}>
+                                    <a className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-telegram-plane"></i></a>
                                 </Link>
-                                <Link href="https://www.linkedin.com/in/mcelepci/">
-                                    <a className="item"><i className="fab fa-linkedin"></i></a>
+                                <Link href="https://www.linkedin.com/in/mcelepci/" prefetch={false}>
+                                    <a className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-linkedin"></i></a>
                                 </Link>
-                                <Link href="https://instagram.com/mcelepci_">
-                                    <a className="item"><i className="fab fa-instagram"></i></a>
+                                <Link href="https://instagram.com/mcelepci_" prefetch={false}>
+                                    <a className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-instagram"></i></a>
                                 </Link>
-                                <Link href="https://github.com/celepci">
-                                    <a className="item"><i className="fab fa-github"></i></a>
+                                <Link href="https://github.com/celepci" prefetch={false}>
+                                    <a className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-github"></i></a>
                                 </Link>
                             </div>
                         </div>

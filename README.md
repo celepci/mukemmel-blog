@@ -40,18 +40,18 @@ ilgili klasöre git.
 
 ### Kolay
 
-- yazı tipini değiştirebilirsin
-- renkleri değiştirebilirsin
-- bilgisayar, tablet ve mobil cihazlarda farklı ve daha güzel görünmesini sağlayabilirsin
+- ~~yazı tipini değiştirebilirsin~~
+- ~~renkleri değiştirebilirsin~~
+- ~~bilgisayar, tablet ve mobil cihazlarda farklı ve daha güzel görünmesini sağlayabilirsin~~
 - ...
 
 ### Orta
 
-- her iki sayfada tekrar eden kodu refactor et (düzenle) böylelikle kod tekrarı olmasın
+- ~~her iki sayfada tekrar eden kodu refactor et (düzenle) böylelikle kod tekrarı olmasın~~
 - sayfalama ekleyebilirsin
 - kendi domain'inde yayınlayabilirsin
-- yazıları paylaşma linki
-- statik sayfalar ekleyebilirsin (örn. hakkında)
+- ~~yazıları paylaşma linki~~
+- ~~statik sayfalar ekleyebilirsin (örn. hakkında)~~
 - websitesi linkini ENV değişkeni olarak tanımla (localhost ve heroku linkleri arasında değişiklik yapmana gerek kalmasın, kod nerede çalıştığını anlayıp o linklerden doğru olana istek yapsın)
 - google analytics ile entegre et ve ziyaretçi trafiğini takip et
 - ...
