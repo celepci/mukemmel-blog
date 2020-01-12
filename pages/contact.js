@@ -44,7 +44,7 @@ const Contact = () => (
                             </div>
                             <div className="contact_item-content">
                                 <div className="title">Contact me by email</div>
-                                <div className="description">You can contact me using Email. Click to below button or copy this <i>muhammetcelepci1@gmail.com</i> mail address.</div>
+                                <div className="description">You can contact me using Email. Click to below button or <pre className="d-inline">muhammetcelepci1@gmail.com</pre> copy this mail address.</div>
                                 <Link href="mailto:muhammetcelepci1@gmail.com" prefetch={false}>
                                     <a className="btn btn-primary btn-sm btn-icon-right"  target="_blank" rel="norefferer noopener">Send Mail<i className="fas fa-arrow-right"></i></a>
                                 </Link>
