@@ -6,8 +6,7 @@ import ReactMarkdown from "react-markdown";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import PropTypes from "prop-types";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import CodeBlock from '../../components/code-block';
 
 const BlogPost = ({ post }) => (
   <div>
@@ -44,6 +43,9 @@ const BlogPost = ({ post }) => (
                   source={post.details}
                   skipHtml={false}
                   escapeHtml={false}
+                  renderers={{
+                    code: CodeBlock,
+                  }}
                 />
                 <div className="subtitle mini"><i className="fas fa-tag"></i>Tags</div>
                 <div className="tags">

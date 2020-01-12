@@ -1,47 +1,25 @@
-const React = require('react')
-const PropTypes = require('prop-types')
-const hljs = window.hljs
+import React from 'react';
+import PropTypes from 'prop-types';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
-class CodeBlock extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.setRef = this.setRef.bind(this)
+export default class CodeBlock extends React.PureComponent {
+  static propTypes = {
+    value: PropTypes.string.isRequired,
+    language: PropTypes.string
   }
 
-  setRef(el) {
-    this.codeEl = el
-  }
-
-  componentDidMount() {
-    this.highlightCode()
-  }
-
-  componentDidUpdate() {
-    this.highlightCode()
-  }
-
-  highlightCode() {
-    hljs.highlightBlock(this.codeEl)
+  static defaultProps = {
+    language: null,
   }
 
   render() {
+    const { language, value } = this.props;
+
     return (
-      <pre>
-        <code ref={this.setRef} className={`language-${this.props.language}`}>
-          {this.props.value}
-        </code>
-      </pre>
-    )
+      <SyntaxHighlighter language={language} style={shadesOfPurple}>
+        {value}
+      </SyntaxHighlighter>
+    );
   }
 }
-
-CodeBlock.defaultProps = {
-  language: ''
-}
-
-CodeBlock.propTypes = {
-  value: PropTypes.string.isRequired,
-  language: PropTypes.string
-}
-
-module.exports = CodeBlock
