@@ -26,8 +26,8 @@ const Blog = ({ posts }) => (
                         <h1 className="main_title">ALL POSTS</h1>
                     </div>
 
-                    {posts.map(post => (
-                        <div className="col-xl-4 col-lg-4 col-sm-6">
+                    {posts.map((post, key) => (
+                        <div className="col-xl-4 col-lg-4 col-sm-6" key={key}>
                             <Link href="/blog/[post.slug]" as={`/blog/${post.slug}`}>
                                 <a className="news-item">
                                     <div className="image">
