@@ -55,7 +55,7 @@ const BlogPost = ({ post }) => (
                   <a className="share-item facebook" href=""><i className="fab fa-facebook"></i>Share</a>
                   <a className="share-item twitter" href=""><i className="fab fa-twitter"></i>Tweet</a>
                   <a className="share-item whatsapp" href=""><i className="fab fa-whatsapp"></i>Send</a>
-                  </div>
+                </div>
               </div>
             </div>
             <div className="guzel_alan_yatay big">Yatay Reklam</div>
@@ -93,8 +93,7 @@ const BlogPost = ({ post }) => (
 );
 
 BlogPost.getInitialProps = async ({ req, query }) => {
-  // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch(`http://localhost:3000/api/post/${query.postId}`);
+  const res = await fetch(`${process.env.URL}/api/post/${query.postId}`);
   const json = await res.json();
   return {
     post: json.post

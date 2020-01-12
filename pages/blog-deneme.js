@@ -7,7 +7,7 @@ import Router from 'next/router'
 
 export default class Pagination extends React.Component {
   static async getInitialProps({ query: { _start = 1,_limit = 1 } }) {
-    const res = await fetch(`http://localhost:3000/api/posts?_start=${_start}&_limit=${_limit}`);
+    const res = await fetch(`${process.env.URL}/api/posts?_start=${_start}&_limit=${_limit}`);
     const json = await res.json();
     return { 
         posts: json.posts,

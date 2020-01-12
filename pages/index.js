@@ -11,13 +11,14 @@ const Home = ({ posts }) => (
     <Header />
     <section className="main">
       <div className="container">
+
         <BlogSlider />
         <section className="about">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8 col-m480-12">
               <div className="about-text">
                 <h1 className="main_title">Who Am I?</h1>
-                <p>Hey there, I'm Muhammet Celepci. I'm a Computer Engineer and work as a Front End Developer.</p>
+                <p> Hey there, I'm Muhammet Celepci. I'm a Computer Engineer and work as a Front End Developer.</p>
                 <Link href="/about">
                   <a className="btn btn-outline-primary btn-lg">What Else About Me</a>
                 </Link>
@@ -193,7 +194,7 @@ const Home = ({ posts }) => (
 
 Home.getInitialProps = async ({ req }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch("http://localhost:3000/api/posts");
+  const res = await fetch(`${process.env.URL}/api/posts`);
   const json = await res.json();
   return { posts: json.posts };
 };
