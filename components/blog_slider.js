@@ -1,11 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
- 
-class BlogSlider extends React.Component {
-  render() {
-    return <div>Hello World</div>;
-  }
+const BlogSlider = ({ title, x }) => {
+  return(
+  <div>{ title } &&& {x}</div>
+  );
 }
- 
+
 export default BlogSlider;

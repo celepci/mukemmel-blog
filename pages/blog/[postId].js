@@ -33,13 +33,14 @@ const BlogPost = ({ post }) => (
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
-            <div className="content"><a className="main_image fancy_img" href="/img/wall.jpg"><img src="/img/wall.jpg" /></a>
+            <div className="content">
+            <a className="main_image fancy_img" href={`${post.image.src}`}><img src={`${post.image.src}`} alt={`${post.image.src}`} /></a> 
               <div className="content-text">
                 <div className="guzel_alan_kare_uzun guzel_alan_fixed">Dikey Sabit Reklam</div>
                 <div className="kaynak_tarih">Muhammet Celepci<i className="far fa-dot-circle"></i>{post.date}, {post.time}</div>
                 <h1>{post.title}</h1>
 
-                <ReactMarkdown
+                <ReactMarkdown 
                   source={post.details}
                   skipHtml={false}
                   escapeHtml={false}
@@ -49,10 +50,18 @@ const BlogPost = ({ post }) => (
                 />
                 <div className="subtitle mini"><i className="fas fa-tag"></i>Tags</div>
                 <div className="tags">
+                  {/* Loop öncesi geçici tags çözümü */}
+                  <div className="tags-item">{post.tags[0]}</div>
+                  <div className="tags-item">{post.tags[1]}</div>
+                  <div className="tags-item">{post.tags[2]}</div>
+                  <div className="tags-item">{post.tags[3]}</div>
+                  <div className="tags-item">{post.tags[4]}</div>
+                  <div className="tags-item">{post.tags[5]}</div>
+
                 </div>
                 <div className="subtitle mini"><i className="fas fa-share"></i>Share</div>
                 <div className="share">
-                  <a className="share-item facebook" href=""><i className="fab fa-facebook"></i>Share</a>
+                  <a className="share-item facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.URL}/blog/${post.slug}`}><i className="fab fa-facebook"></i>Share</a>
                   <a className="share-item twitter" href=""><i className="fab fa-twitter"></i>Tweet</a>
                   <a className="share-item whatsapp" href=""><i className="fab fa-whatsapp"></i>Send</a>
                 </div>

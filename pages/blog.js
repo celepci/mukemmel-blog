@@ -3,6 +3,7 @@ import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import BlogItem from "../components/blog_item";
 
 
 const Blog = ({ posts }) => (
@@ -28,29 +29,15 @@ const Blog = ({ posts }) => (
 
                     {posts.map((post, key) => (
                         <div className="col-xl-4 col-lg-4 col-sm-6" key={key}>
-                            <Link href="/blog/[post.slug]" as={`/blog/${post.slug}`}>
-                                <a className="news-item">
-                                    <div className="image">
-                                        <img src="/img/img7.jpg" />
-                                    </div>
-                                    <div className="news-item-detail">
-                                        <div className="news-item-detail-icon">
-                                            <div className="svg">
-                                                <svg>
-                                                    <use xlinkHref="#book"></use>
-                                                </svg>
-                                                <span>{post.readingtime}</span>
-                                            </div>
-                                        </div>
-                                        <div className="news-item-detail-content">
-                                            <div className="title">{post.title}</div>
-                                            <div className="summary">
-                                                {post.summary}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </Link>
+                            <BlogItem
+                                title={post.title}
+                                slug={post.slug}
+                                image_src={post.image.src}
+                                image_alt={post.image.alt}
+                                readingtime={post.readingtime}
+                                summary={post.summary}
+                                date={post.date}
+                            />
                         </div>
                     ))}
 

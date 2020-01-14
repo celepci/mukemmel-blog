@@ -31,7 +31,7 @@ export const getPosts = () => {
       time: "12:22 AM",
       readingtime: "5 min",
       image: {
-        src: "/img/img7.jpg",
+        src: "/img/img8.jpg",
         alt: "Deneme Alt Etiketi"
       },
       tags: {
@@ -44,15 +44,15 @@ export const getPosts = () => {
       }
     },
     {
-      title: "Merhaba dünya!",
+      title: "Merhaba dünya! Nasılsın do?",
       slug: "merhaba",
       details: require("./posts/merhaba.md").default,
       summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda",
-      date: "1 Aralık 2020",
+      date: "1 January 2020",
       time: "12:22 PM",
       readingtime: "5 min",
       image: {
-        src: "/img/img7.jpg",
+        src: "/img/img9.jpg",
         alt: "Deneme Alt Etiketi"
       },
       tags: {

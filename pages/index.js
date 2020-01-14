@@ -12,7 +12,7 @@ const Home = ({ posts }) => (
     <section className="main">
       <div className="container">
 
-        <BlogSlider />
+        <BlogSlider title="deneme" x="BlogSlider" />
         <section className="about">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8 col-m480-12">
