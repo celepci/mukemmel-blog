@@ -1,15 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
 const About = () => (
   <div>
-    <Header />
+
+    <Header></Header>
+    <Head>
+      <title>About Me - Muhammet Celepci</title>
+    </Head>
     <div className="page_nav d-flex align-items-center">
       <div className="container d-flex align-items-center justify-content-center">
         <Link href="">
-          <a>Homepage</a> 
+          <a>Homepage</a>
         </Link>
         <svg className="chevron">
           <use xlinkHref="#chevron"></use>
@@ -38,8 +43,8 @@ const About = () => (
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dignissimos eius enim eum hic, iste laboriosam, laudantium magnam mollitia necessitatibus neque odio officia porro, provident quos reprehenderit tempore totam velit!</p>
                 <figure>
                   <a className="fancy_img" href="/img/wall.jpg" >
-                    <img src="/img/wall.jpg"/>
-                    </a>
+                    <img src="/img/wall.jpg" />
+                  </a>
                   <figcaption>Diğer Sermaye Firmalarından Destek</figcaption>
                 </figure>
                 <p>

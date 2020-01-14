@@ -1,11 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
 const Contact = () => (
     <div>
-        <Header />
+        <Header></Header>
+        <Head>
+            <title>Contact - Muhammet Celepci</title>
+        </Head>
         <div className="page_nav d-flex align-items-center">
             <div className="container d-flex align-items-center justify-content-center">
                 <Link href="/">

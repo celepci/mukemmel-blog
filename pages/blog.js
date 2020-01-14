@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -9,6 +10,9 @@ import BlogItem from "../components/blog_item";
 const Blog = ({ posts }) => (
     <div>
         <Header />
+        <Head>
+            <title>All Posts - Muhammet Celepci</title>
+        </Head>
         <div className="page_nav d-flex align-items-center">
             <div className="container d-flex align-items-center justify-content-center">
                 <Link href="/">
