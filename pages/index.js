@@ -4,7 +4,6 @@ import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import BlogItem from "../components/blog_item";
-import BlogSlider from "../components/blog_slider2";
 import Router from 'next/router'
 
 

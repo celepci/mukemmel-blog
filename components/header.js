@@ -3,9 +3,8 @@ import Link from 'next/link'
 import Head from "next/head";
 import IndexSvg from "./svg/index";
 import Search from "./search"
-const onal = () => {
-    alert("dassadas");
-}
+
+
 const Header = () => (
 
     <header className="header">
