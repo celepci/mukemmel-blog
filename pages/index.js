@@ -5,13 +5,11 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import BlogSlider from "../components/blog_slider";
 
-
 const Home = ({ posts }) => (
   <div id="root">
     <Header />
     <section className="main">
       <div className="container">
-
         <BlogSlider title="deneme" x="BlogSlider" />
         <section className="about">
           <div className="row align-items-center">
@@ -56,7 +54,11 @@ const Home = ({ posts }) => (
                   <div className="image_cover xs"><img src="/img/wordpress.jpg" /></div>
                 </div>
                 <div className="about-images-item">
-                  <div className="image_cover sm"><a className="lets_contact" href=""><span>Let's</span>Contact</a></div>
+                  <div className="image_cover sm">
+                    <Link href="/contact">
+                      <a className="lets_contact"><span>Let's</span>Contact</a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

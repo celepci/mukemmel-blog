@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from "next/head";
 import IndexSvg from "./svg/index";
-
+import Search from "./search"
 const Header = () => (
     <header className="header">
         <Head>
@@ -25,7 +25,7 @@ const Header = () => (
             <link href="/css/config.css" rel="stylesheet" />
             <link href="/css/style.css" rel="stylesheet" />
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossOrigin="anonymous"></script>
-
+            
         </Head>
         <IndexSvg />
         <div className="header-nav">
@@ -48,78 +48,8 @@ const Header = () => (
                                 <use xlinkHref="#search"></use>
                             </svg>
                         </div>
-                        <div className="search_area">
-                            <div className="search_area-content">
-                                <div className="search_area-content-title">Search in Blog</div>
-                                <div className="input_cover">
-                                    <input className="form-control" type="text" placeholder="Search" required="required" />
-                                    <svg>
-                                        <use xlinkHref="#search"></use>
-                                    </svg>
-                                </div>
-                                <div className="results nice_scroll">
-                                    <div className="row">
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="results-item">
-                                                <div className="results-item-title">Deneme Yazı</div>
-                                                <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <svg className="search_area-close">
-                                <use xlinkHref="#delete"></use>
-                            </svg>
-                        </div>
+                        <Search></Search>
+
                         <div className="header-nav-content-menu">
                             <div className="menu_linkler d-flex ml-10">
                                 <ul className="nav">
@@ -137,7 +67,7 @@ const Header = () => (
                                         <Link href="/blog">
                                             <a className="nav-link">Blog</a>
                                         </Link>
-                                    </li>    
+                                    </li>
                                     <li className="nav-item">
                                         <Link href="/contact">
                                             <a className="nav-link">Contact</a>
