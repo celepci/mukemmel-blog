@@ -4,6 +4,18 @@ import Head from "next/head";
 import IndexSvg from "./svg/index";
 import Search from "./search"
 
+const injectGA = () => {
+    if (typeof window == 'undefined') {
+      return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-58126438-11');
+  };
 
 const Header = () => (
 
@@ -25,12 +37,11 @@ const Header = () => (
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
             <link href="/css/config.css" rel="stylesheet" />
-            <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-            <link rel="stylesheet" href="/css/slider_styles.css"></link>
             <link href="/css/style.css" rel="stylesheet" />
-
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossOrigin="anonymous"></script>
+            {/* Global site tag (gtag.js) - Google Analytics */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58126438-11" />
+            <script>{injectGA()}</script>
         </Head>
         <IndexSvg />
         <div className="header-nav">
