@@ -10,16 +10,13 @@ const Footer = () => (
                 <div className="content">
                     <div className="row align-items-center">
                         <div className="col-md-4">
-                            <Link href="/">
-                                <a className="logo">
-                                    <div className="icon"><img src="/img/pineapple2.svg" /></div>
-                                    <div className="name">Muhammet.Celepci</div>
-                                </a>
-                            </Link>
+                            <a href="/" className="logo">
+                                <div className="icon"><img src="/img/pineapple2.svg" /></div>
+                                <div className="name">Muhammet.Celepci</div>
+                            </a>
                         </div>
                         <div className="col-md-8">
                             <div className="social">
-                                <a href="" className="item"><i className="fab fa-facebook-f"></i></a>
                                 <a href="https://web.telegram.org/#/im?p=@celepci" className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-telegram-plane"></i></a>
                                 <a href="https://www.linkedin.com/in/mcelepci/" className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-linkedin"></i></a>
                                 <a href="https://instagram.com/mcelepci_" className="item" target="_blank" rel="norefferer noopener"><i className="fab fa-instagram"></i></a>
@@ -30,10 +27,10 @@ const Footer = () => (
                     <div className="row">
                         <div className="col-md-12">
                             <div className="linkler">
-                                <Link href="/"><a>Homepage</a></Link>
-                                <Link href="/about"><a>About</a></Link>
-                                <Link href="/blog"><a>Blog</a></Link>
-                                <Link href="/contact"><a>Contact</a></Link>
+                                <a href="/">Homepage</a>
+                                <a href="/about">About</a>
+                                <a href="/blog">Blog</a>
+                                <a href="/contact">Contact</a>
                             </div>
                         </div>
                     </div>

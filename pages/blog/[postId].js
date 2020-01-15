@@ -7,8 +7,9 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import PropTypes from "prop-types";
 import CodeBlock from '../../components/code-block';
+import BlogItem from "../../components/blog_item";
 
-const BlogPost = ({ post }) => (
+const BlogPost = ({ post, posts }) => (
   <div>
     <Header></Header>
     <Head>
@@ -70,26 +71,19 @@ const BlogPost = ({ post }) => (
           <div className="col-xl-12">
             <h4 className="main_title md">Other Posts</h4>
             <div className="blog-slider owl-carousel owl-theme owl-theme_custom">
-              <div className="blog-slider-item">
-                <a className="news-item" href="#!">
-                  <div className="image">
-                    <img src="/img/img7.jpg" />
-                  </div>
-                  <div className="news-item-detail">
-                    <div className="news-item-detail-icon">
-                      <div className="svg">
-                        <svg>
-                          <use xlinkHref="#book"></use>
-                        </svg><span>5 dk</span>
-                      </div>
-                    </div>
-                    <div className="news-item-detail-content">
-                      <div className="title">The Best of 10 Frontend Tools</div>
-                      <div className="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dicta error maxime sit vel. Asperiores consectetur dolor dolores eum fugit id nesciunt odio quasi reiciendis voluptate. Culpa earum error quod!</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              {posts.map((post, key) => (
+                <div className="blog-slider-item" key={key}>
+                  <BlogItem
+                    title={post.title}
+                    slug={post.slug}
+                    image_src={post.image.src}
+                    image_alt={post.image.alt}
+                    readingtime={post.readingtime}
+                    summary={post.summary}
+                    date={post.date}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -100,10 +94,25 @@ const BlogPost = ({ post }) => (
 );
 
 BlogPost.getInitialProps = async ({ req, query }) => {
+  // Get post details
   const res = await fetch(`${process.env.URL}/api/post/${query.postId}`);
   const json = await res.json();
+  
+  // Get other posts details
+  const resOtherPosts = await fetch(`${process.env.URL}/api/posts`);
+  const jsonOtherPosts = await resOtherPosts.json();
+
+  // Remove post in other posts
+  let removeItemSlug = json.post.slug;
+  let filteredResult = jsonOtherPosts.posts.filter((el) => {
+    //console.log(el.slug.indexOf(removeItemSlug) == -1)
+    //console.log(el.slug.indexOf(removeItemSlug))
+    return el.slug.indexOf(removeItemSlug) == -1;
+  })
+  console.log (filteredResult);
   return {
-    post: json.post
+    post: json.post,
+    posts: filteredResult
   };
 };
 

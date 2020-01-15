@@ -3,14 +3,17 @@ import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import BlogSlider from "../components/blog_slider";
+import BlogItem from "../components/blog_item";
+import BlogSlider from "../components/blog_slider2";
+import Router from 'next/router'
+
 
 const Home = ({ posts }) => (
   <div id="root">
     <Header />
     <section className="main">
       <div className="container">
-        <BlogSlider title="deneme" x="BlogSlider" />
+        
         <section className="about">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8 col-m480-12">
@@ -187,6 +190,26 @@ const Home = ({ posts }) => (
             </div>
           </div>
         </section>
+        <section className="blog">
+          <h3 className="main_title lg text-center">Blog</h3>
+          <div className="description text-center">Lorem ipsum dolor sit amet, explicabo facilis fugiat harum laboriosam magni nam.</div>
+          <div className="blog-slider owl-carousel owl-theme owl-theme_custom">
+            {posts.slice(0, 10).map((post, key) => (
+              <div className="blog-slider-item" key={key}>
+                <BlogItem
+                  title={post.title}
+                  slug={post.slug}
+                  image_src={post.image.src}
+                  image_alt={post.image.alt}
+                  readingtime={post.readingtime}
+                  summary={post.summary}
+                  date={post.date}
+                />
+              </div>
+            ))}
+          </div>
+          <a className="btn btn-primary btn-sm all_items btn-icon-right" href="">All Blog Posts<i className="fas fa-arrow-right"></i></a>
+        </section>
       </div>
     </section>
 
@@ -198,7 +221,13 @@ Home.getInitialProps = async ({ req }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
   const res = await fetch(`${process.env.URL}/api/posts`);
   const json = await res.json();
+  
   return { posts: json.posts };
 };
 
+const handleRouteChange = url => {
+  console.log('App is changing to: ', url);
+}
+
+Router.events.on('routeChangeStart', handleRouteChange)
 export default Home;

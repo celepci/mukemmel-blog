@@ -23,6 +23,7 @@
     "react-syntax-highlighter": "^12.2.1"
   },
   "devDependencies": {
+    "css-loader": "^3.4.2",
     "style-loader": "^1.1.2"
   }
 }

@@ -3,7 +3,11 @@ import Link from 'next/link'
 import Head from "next/head";
 import IndexSvg from "./svg/index";
 import Search from "./search"
+const onal = () => {
+    alert("dassadas");
+}
 const Header = () => (
+
     <header className="header">
         <Head>
             <meta charSet="UTF-8" />
@@ -20,24 +24,24 @@ const Header = () => (
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossOrigin="anonymous" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-            <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Pacifico&display=swap" rel="stylesheet" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
             <link href="/css/config.css" rel="stylesheet" />
+            <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+            <link rel="stylesheet" href="/css/slider_styles.css"></link>
             <link href="/css/style.css" rel="stylesheet" />
+
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossOrigin="anonymous"></script>
-            
         </Head>
         <IndexSvg />
         <div className="header-nav">
             <div className="container-fluid">
                 <div className="header-nav-content">
                     <div className="header-nav-content-left_side">
-                        <Link href="/">
-                            <a className="logo">
-                                <div className="icon"><img src="/img/pineapple2.svg" /></div>
-                                <div className="name">Muhammet.Celepci</div>
-                            </a>
-                        </Link>
+                        <a className="logo" href="/">
+                            <div className="icon"><img src="/img/pineapple2.svg" /></div>
+                            <div className="name">Muhammet.Celepci</div>
+                        </a>
                         <svg className="mobil_menu_open">
                             <use xlinkHref="#menu"></use>
                         </svg>
@@ -54,24 +58,16 @@ const Header = () => (
                             <div className="menu_linkler d-flex ml-10">
                                 <ul className="nav">
                                     <li className="nav-item">
-                                        <Link href="/">
-                                            <a className="nav-link">Homepage</a>
-                                        </Link>
+                                        <a href="/" className="nav-link">Homepage</a>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/about">
-                                            <a className="nav-link">About</a>
-                                        </Link>
+                                        <a className="nav-link" href="/about">About</a>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/blog">
-                                            <a className="nav-link">Blog</a>
-                                        </Link>
+                                        <a className="nav-link" href="/blog">Blog</a>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/contact">
-                                            <a className="nav-link">Contact</a>
-                                        </Link>
+                                        <a className="nav-link" href="/contact">Contact</a>
                                     </li>
                                 </ul>
                             </div>
