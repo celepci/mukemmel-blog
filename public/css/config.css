@@ -18,3 +18,9 @@
     src: url(/fonts/sofia-pro-light.otf)
 }
 
+.results_message{
+    color: #FFF;
+    margin-top: 15px;
+    margin-bottom: -20px;
+    text-align: center;
+}

@@ -5,7 +5,6 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import PropTypes from "prop-types";
 import CodeBlock from '../../components/code-block';
 import BlogItem from "../../components/blog_item";
 
@@ -70,9 +69,9 @@ const BlogPost = ({ post, posts }) => (
           </div>
           <div className="col-xl-12">
             <h4 className="main_title md">Other Posts</h4>
-            <div className="blog-slider owl-carousel owl-theme owl-theme_custom">
-              {posts.map((post, key) => (
-                <div className="blog-slider-item" key={key}>
+            <div className="row">
+              {posts.slice(0, 3).map((post, key) => (
+                <div className="col-xl-4  col-md-6" key={key}>
                   <BlogItem
                     title={post.title}
                     slug={post.slug}
@@ -97,7 +96,7 @@ BlogPost.getInitialProps = async ({ req, query }) => {
   // Get post details
   const res = await fetch(`${process.env.URL}/api/post/${query.postId}`);
   const json = await res.json();
-  
+
   // Get other posts details
   const resOtherPosts = await fetch(`${process.env.URL}/api/posts`);
   const jsonOtherPosts = await resOtherPosts.json();
@@ -109,7 +108,7 @@ BlogPost.getInitialProps = async ({ req, query }) => {
     //console.log(el.slug.indexOf(removeItemSlug))
     return el.slug.indexOf(removeItemSlug) == -1;
   })
-  console.log (filteredResult);
+  console.log(filteredResult);
   return {
     post: json.post,
     posts: filteredResult

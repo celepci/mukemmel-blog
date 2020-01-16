@@ -22,8 +22,8 @@ class Search extends React.Component {
   fetchResults = (query) => {
     const url = `${process.env.URL}/api/posts`;
     if (query.length < 1) {
-      this.setState({ results: 0, message: '', loading: false });
-      console.log(this.state);
+      this.setState({ results: {}, message: '', loading: false });
+      //console.log(this.state);
     } else {
       Axios.get(url)
         .then(res => {
@@ -32,10 +32,10 @@ class Search extends React.Component {
           })
           const message = (resultsNew.length < 1) ? 'No Results' : `${resultsNew.length} Post Found`;
           this.setState({ results: resultsNew, message: message, loading: false });
-          console.log(this.state);
-          console.log(message);
-          console.log(results.length);
-          console.log(resultsNew);
+          //console.log(this.state);
+          //console.log(message);
+          //console.log(results.length);
+          //console.log(resultsNew);
         })
         .catch(err => false);
     }
@@ -50,7 +50,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <form className="search_area" onSubmit={this.handleSearchSubmit}>
+      <form className="search_area active" onSubmit={this.handleSearchSubmit}>
         <div className="search_area-content">
           <div className="search_area-content-title">Search in Blog</div>
           <div className="input_cover">
@@ -59,19 +59,24 @@ class Search extends React.Component {
               <use xlinkHref="#search"></use>
             </svg>
           </div>
+          <div className="results_message">{this.state.message}</div>
           <div className="results nice_scroll">
-            <div className="row">
-              <div className="col-sm-6" >
-                {this.state.results.length > 1 &&
-                  <Link href="/contact" >
-                    <div className="results-item">
-                      <div className="results-item-title">Deneme Yazı</div>
-                      <div className="results-item-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus asperiores atque blanditiis.</div>
-                    </div>
-                  </Link>
-                }
+            {this.state.results.length > 0 &&
+              <div className="row">
+
+                {this.state.results.slice(0, 10).map((post, key) => (
+
+                  <div className="col-sm-6" >
+                    <Link href="/contact" key={key}>
+                      <div className="results-item">
+                        <div className="results-item-title">{post.title}</div>
+                        <div className="results-item-summary">{post.summary}</div>
+                      </div>
+                    </Link>
+                  </div>
+                ))}
               </div>
-            </div>
+            }
           </div>
         </div>
         <svg className="search_area-close">
