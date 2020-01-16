@@ -30,27 +30,25 @@ const About = () => (
               <div className="content-text">
                 <h1>About Me</h1>
                 <p>
-                  Firma ortaklarından Aaron Batalion yapmış olduğu açıklamada yatırım için ele aldıkları yöntemleri dile getirerek;
-                  ”Yeni bir fon kurulması, mevcut fonun bir kısmının  veya tamamen yeni bir proje başlatılması şeklinde düşüncelerimiz mevcut. Şu anki düşüncemiz ise yeni bir fon kurmaktan ziyade mevcut fonun bir kısmını bu sektöre ayırmak.” Şeklinde açıklamalarda bulundu.
+                  <b> Hi there!</b>
+                  <br />
+                  In fact, the reason for create this page is just internet traditions. There's not much things to write. But I mention shortly.
                 </p>
+                <h4>What am I doing recently?</h4>
                 <p>
-                  Gelen bilgilere göre Batalion’un uzun süre beklemek istememesi nedeni ile Lightspeed görevinden bir süre ayrılarak kendi Kripto Para odaklı projesini ortaya çıkarabileceği düşünülüyor.ildi. Josef Sural'ın cenazesinin bulunduğu taput bu masaya konulurken, futbolcular ve teknik ekip de siyah kıyafetler giyerek tabutun etrafında sıralandı.
-                  Batalion, kripto paralarla tek Lightspeed ortağı değil. Firmanın Snapchat yatırımını üstlenen ve şimdi bir Bitcoin savunucusu olan Jeremy Liew, Lightspeed’in 2014 yılında kripto para cüzdanı Blockchain.com’a yaptığı yatırımın bir parçasıydı.
+                  I work as a freelance web developer for now. I live in Kdz. Ereğli. And I will go to the Army soon. 
                 </p>
-                <h3>Diğer Sermaye Firmalarından Destek</h3>
-                <p>Lightspeed’in kripto paralara olan ilgisi, diğer birçok büyük çaplı sermaye firması tarafından takip ediliyor. Geçtiğimiz ay Blockchain ve kripto para odaklı projelere yatırım yapmayı düşündüğünü açıklayan Comcast Ventures firması bunlar arasında yer alıyor.</p>
-                <h4>"LOREM IPSUM SIT DOLOR"</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dignissimos eius enim eum hic, iste laboriosam, laudantium magnam mollitia necessitatibus neque odio officia porro, provident quos reprehenderit tempore totam velit!</p>
+                
                 <figure>
-                  <a className="fancy_img" href="/img/wall.jpg" >
-                    <img src="/img/wall.jpg" />
+                  <a className="fancy_img" href="/img/kdzeregli.jpg" >
+                    <img src="/img/kdzeregli.jpg" />
                   </a>
-                  <figcaption>Diğer Sermaye Firmalarından Destek</figcaption>
+                  <figcaption>A view from where I live Kdz. Ereğli</figcaption>
                 </figure>
-                <p>
-                  Firma ortaklarından Aaron Batalion yapmış olduğu açıklamada yatırım için ele aldıkları yöntemleri dile getirerek;
-                  ”Yeni bir fon kurulması, mevcut fonun bir kısmının  veya tamamen yeni bir proje başlatılması şeklinde düşüncelerimiz mevcut. Şu anki düşüncemiz ise yeni bir fon kurmaktan ziyade mevcut fonun bir kısmını bu sektöre ayırmak.” Şeklinde açıklamalarda bulundu.
-                </p>
+                <h4>How can you contact to me?</h4>
+                <a href="/contact">
+                    Click This. 
+                </a>
               </div>
             </div>
           </div>
