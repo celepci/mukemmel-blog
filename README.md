@@ -2,11 +2,6 @@ Muhammet Celepci - Projeyi devraldım. 20.12.2019
 
 > npm run dev
 
-ilgili klasöre git.
-
-> json-server --watch entries.json
-
-çalıştır.
 
 ## YARIŞMAYA KATIL! (son gün 1 Şubat 2020)
 
