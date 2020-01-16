@@ -50,7 +50,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <form className="search_area active" onSubmit={this.handleSearchSubmit}>
+      <form className="search_area" onSubmit={this.handleSearchSubmit}>
         <div className="search_area-content">
           <div className="search_area-content-title">Search in Blog</div>
           <div className="input_cover">

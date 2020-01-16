@@ -6,7 +6,6 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import BlogItem from "../components/blog_item";
 
-
 const Blog = ({ posts }) => (
     <div>
         <Header />
@@ -68,6 +67,11 @@ const Blog = ({ posts }) => (
 Blog.getInitialProps = async ({ req }) => {
     const res = await fetch(`${process.env.URL}/api/posts`);
     const json = await res.json();
+    console.log(typeof json.posts);
+    const arr = Object.keys(json.posts);
+    console.log(arr);
+    arr.slice(0,1);
+    console.log(arr);
     return { posts: json.posts };
 }
 export default Blog;
