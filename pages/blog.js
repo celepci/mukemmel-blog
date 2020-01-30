@@ -67,11 +67,13 @@ const Blog = ({ posts }) => (
 Blog.getInitialProps = async ({ req }) => {
     const res = await fetch(`${process.env.URL}/api/posts`);
     const json = await res.json();
-    console.log(typeof json.posts);
-    const arr = Object.keys(json.posts);
-    console.log(arr);
-    arr.slice(0,1);
-    console.log(arr);
+    // let arr = Object.entries(json.posts);
+    // arr.splice(1,arr.length);
+    // arr = arr.values();
+    // console.log(arr);
+    // const new_obj = {...arr}; 
+    // console.log(new_obj);
+    // console.log(typeof json.posts);
     return { posts: json.posts };
 }
 export default Blog;

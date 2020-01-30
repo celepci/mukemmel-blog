@@ -207,7 +207,7 @@ const Home = ({ posts }) => (
               </div>
             ))}
           </div>
-          <a className="btn btn-primary btn-sm all_items btn-icon-right" href="">All Blog Posts<i className="fas fa-arrow-right"></i></a>
+          <a className="btn btn-primary btn-sm all_items btn-icon-right" href="/blog">All Blog Posts<i className="fas fa-arrow-right"></i></a>
         </section>
       </div>
     </section>

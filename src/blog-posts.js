@@ -19,7 +19,6 @@ export const getPosts = () => {
         3: "Vuejs",
         4: "Reactjs",
         5: "Typescript"
-
       }
     },
     {

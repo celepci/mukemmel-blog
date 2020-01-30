@@ -26,7 +26,7 @@ const Contact = () => (
                 <div className="row">
                     <div className="col-xl-12">
                         <h1 className="main_title">Contact</h1>
-                        <p className="description"><b>Hi dude!</b> I'm just one click away if you want to work with me or ask something. Below are 2 quick ways to contact me. </p>
+                        <p className="description"><b>Hi!</b> I'm just one click away if you want to work with me or ask something. Below are 2 quick ways to contact me. </p>
                     </div>
                     <div className="col-xl-5 col-lg-6">
                         <div className="contact_item">
