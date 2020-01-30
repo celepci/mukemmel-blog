@@ -50,7 +50,7 @@ const BlogPost = ({ post, posts }) => (
                     code: CodeBlock,
                   }}
                 />
-                <div className="subtitle mini"><i className="fas fa-tag"></i>Tags</div>
+                <div className="subtitle mini tag_title"><i className="fas fa-tag"></i>Tags</div>
                 <div className="tags">
                   {Object.values(post.tags).map((val, key) => (
                     <div className="tags-item" key={key}>{val}</div>

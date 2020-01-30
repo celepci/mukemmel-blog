@@ -44,7 +44,7 @@ const Blog = ({ posts }) => (
                         </div>
                     ))}
 
-                    <div className="col-12">
+                    {/*<div className="col-12">
                         <nav>
                             <ul className="pagination justify-content-center">
                                 <li className="page-item"><a className="page-link" href="#" aria-label="Previous"><i className="fas fa-angle-double-left"></i></a></li>
@@ -56,7 +56,7 @@ const Blog = ({ posts }) => (
                                 <li className="page-item disabled"><a className="page-link" href="#"><i className="fas fa-angle-right"></i></a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </section>
