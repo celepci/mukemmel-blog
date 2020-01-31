@@ -67,14 +67,14 @@ const Home = ({ posts }) => (
             <div className="col-xl-4 offset-xl-2 col-lg-5 col-md-6 col-sm-8 col-m480-12 order-sm-1">
               <div className="about-text">
                 <h1 className="main_title">What I do?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium culpa dolore enim eos illo, illum iusto laboriosam laudantium magni nemo pariatur, provident quae reprehenderit sed sint suscipit voluptate! Repellat?</p>
+                <p>I usually work on front end development. I work using technologies like VueJS, PUG, SCSS, Wordpress. </p>
               </div>
             </div>
           </div>
         </section>
         <section className="works">
           <h2 className="main_title lg text-center">Works</h2>
-          <div className="description text-center">Lorem ipsum dolor sit amet, explicabo facilis fugiat harum laboriosam magni nam.</div>
+          <div className="description text-center">The projects I've done before.</div>
           <div className="works-slider owl-theme owl-carousel owl-theme_custom">
             <div className="works-item">
               <div className="image"><img src="/img/works/burak_nakliye.jpg" /></div>
@@ -135,7 +135,7 @@ const Home = ({ posts }) => (
             <div className="col-xl-4 col-lg-5 col-md-6 order-1 order-m425-0">
               <div className="techs-text">
                 <h3 className="main_title sm">Which technologies am I use/learn/teach?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda, expedita perferendis quod sed sint voluptas voluptates? At distinctio ipsa nesciunt nisi odio, qui quo quos, sapiente soluta temporibus vero.</p>
+                <p>While develop a project I use various development technologies. At the same time I learn some technologies.</p>
               </div>
             </div>
             <div className="col-xl-6 offset-xl-2 col-lg-7 col-md-6 order-m425-1">
@@ -191,7 +191,7 @@ const Home = ({ posts }) => (
         </section>
         <section className="blog">
           <h3 className="main_title lg text-center">Blog</h3>
-          <div className="description text-center">Lorem ipsum dolor sit amet, explicabo facilis fugiat harum laboriosam magni nam.</div>
+          <div className="description text-center"></div>
           <div className="blog-slider owl-carousel owl-theme owl-theme_custom">
             {posts.slice(0, 10).map((post, key) => (
               <div className="blog-slider-item" key={key}>
